@@ -8,7 +8,6 @@ public class Produto {
 
     private float valor;
 
-
     public float getValor() {
         return valor;
     }
