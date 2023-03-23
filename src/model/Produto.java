@@ -13,7 +13,8 @@ public class Produto {
         return valor;
     }
 
-    public void addAoCarrinho(CarrinhoDeCompra carrinho) {    }
-
+    public void addAoCarrinho(CarrinhoDeCompra carrinho) {
+        carrinho.addProduto(this);
+    }
 
 }
