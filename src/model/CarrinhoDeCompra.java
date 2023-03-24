@@ -1,10 +1,15 @@
 package model;
 
-public class CarrinhoDeCompra {
+import java.util.Arrays;
 
+public class CarrinhoDeCompra {
     private Produto[] itens;
 
-    private double calcularValorTotal() {
+    public Produto[] getItens() {
+        return itens;
+    }
+
+    public double calcularValorTotal() {
         int contador = 0;
         double valorTotal = 0;
         while (contador < itens.length) {
@@ -14,13 +19,10 @@ public class CarrinhoDeCompra {
         return valorTotal;
     }
 
-    private Produto[] getItens() {
-        return itens;
-    }
-
-    protected void addProduto(Produto produto) {
-        int tamanho = itens.length;
-        itens = new Produto[itens.length];
+    public void addProduto(Produto produto) {
+        int tamanho = itens != null ? itens.length : 0;
+        if (tamanho == 0) itens = new Produto[tamanho + 1];
+        itens = Arrays.copyOf(itens, tamanho + 1);
         itens[tamanho] = produto;
     }
 
