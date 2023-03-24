@@ -20,7 +20,7 @@ public class Main {
 
         Produto bermuda = new Produto();
         bermuda.setNome("Bermuda Nike Street Wear")
-                .setDescricao("Linda bermuda laranja com colinhas amarelas")
+                .setDescricao("Linda bermuda laranja com bolinhas amarelas")
                 .setValor(1299.99F);
 
         nikeStore.addProduto(tenis);
